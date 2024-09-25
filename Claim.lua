@@ -8,7 +8,7 @@ if currentLoadedRoom:FindFirstChild("Nodes") then
    num = math.floor(#currentLoadedRoom.Nodes:GetChildren()/2)
 end
 
-eyes.CFrame=(
+eyes.RushNew.CFrame=(
 	num==0 and currentLoadedRoom[currentLoadedRoom.Name] or currentLoadedRoom.Nodes[num]
 ).CFrame+Vector3.new(0,5,0)
 
