@@ -78,3 +78,4 @@ camShake:ShakeOnce(5, 15, 0.1, 1)
 	end
 	end
 	task.wait(0.5)
+end
