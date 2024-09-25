@@ -313,8 +313,8 @@ local vroom = TweenService:Create(move, TweenInfo.new(1),{Volume = 0.5})
 
                 if entityTable.Config.CanKill and not Char:GetAttribute("IsDead") and not Char:GetAttribute("Invincible") and not Char:GetAttribute("Hiding") and (getPlayerRoot().Position - entityModel.PrimaryPart.Position).Magnitude <= entityTable.Config.KillRange then
                     task.spawn(function()
-if workspace.Ambience_FigureEnd.Playing or workspace.Ambience_FigureStart.Playing or workspace.Ambience_Figure.Playing or workspace.Ambience_Seek.Playing or workspace:FindFirstChild("Blink") or workspace:FindFirstChild("SeekMoving") then
-return
+if workspace:FindFirstChild("SeekMoving") or workspace.CurrentRooms:FindFirstChild("51") or workspace:FindFirstChild("Blink") then
+									return
 end
                         Char:SetAttribute("IsDead", true)
 
