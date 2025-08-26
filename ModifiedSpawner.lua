@@ -23,7 +23,7 @@ local SelfModules = {
     Functions = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Functions.lua"))(),
 }
 local ModuleScripts = {
-    ModuleEvents = require(ReSt.ClientModules.Module_Events),
+    ModuleEvents = require(ReSt.ModulesClient.Module_Events),
     MainGame = require(Plr.PlayerGui.MainUI.Initiator.Main_Game),
 }
 local EntityConnections = {}
