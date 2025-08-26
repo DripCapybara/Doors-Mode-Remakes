@@ -1,11 +1,5 @@
 loadstring(game:HttpGet("https://raw.githubusercontent.com/DripCapybara/Test/main/Doors/Functions.lua"))()
-function GitPNG(GithubImg,ImageName)
-	local url=GithubImg
-	if not isfile(ImageName..".png") then
-		writefile(ImageName..".png", game:HttpGet(url))
-	end
-	return (getcustomasset or getsynasset)(ImageName..".png")
-end
+local Achievements = loadstring(game:HttpGet("https://raw.githubusercontent.com/DripCapybara/Test/refs/heads/main/Doors/Achievements.lua"))()
 
 local reb = false
 local seer = false
@@ -18,11 +12,14 @@ Caption('You Executed the Script', 2)
 wait(2)
 Caption('Credits to zavaled for Making Endless Doors',1)
 wait(2)
+Caption('Credits to Cyrratti for making the original script.',3)
+wait(3)
 Caption('Credits to DripCapybara for fixing Endless Mode',3)
--- Custom Door Sounds
+
 loadstring(game:HttpGet("https://raw.githubusercontent.com/check78/Endless-Doors-In-Doors/main/custom%20doors%20sounds.txt"))()
 loadstring(game:HttpGet("https://pastebin.com/raw/6brG9uma"))()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/DripCapybara/Doors-Mode-Remakes/refs/heads/main/Victrola.lua"))()
+
 coroutine.wrap(function()
     while true do
         wait()
@@ -39,24 +36,19 @@ coroutine.wrap(function()
     while true do
         wait(350)
         game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-          if workspace:FindFirstChild("SeekMoving") or workspace.CurrentRooms:FindFirstChild("50") then
+          if workspace:FindFirstChild("SeekMovingNewClone") or workspace.CurrentRooms:FindFirstChild("50") then
           return
     end
         wait(1.5)
---loadstring(game:HttpGet("https://raw.githubusercontent.com/check78/Entities/main/reboundv2.txt"))()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/DripCapybara/Doors-Mode-Remakes/refs/heads/main/Rebound.lua"))()
 if reb == false then
 wait(3)
 reb = true
-local Achievements = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Custom%20Achievements/Source.lua"))()
-
--- Creates and displays your custom achievement
---Achievements.Get({
 Achievements({
     Title = "I Always Come Back.",
     Desc = "Encounter Rebound.",
     Reason = " ",
-    Image = GitPNG("https://github.com/check78/entity-images/blob/main/cookiemonster.png?raw=true","boundbadgev2"),
+    Image = GetGitImage("https://github.com/check78/entity-images/blob/main/cookiemonster.png?raw=true","boundbadgev2"),
 })
 end
     end
@@ -67,23 +59,19 @@ coroutine.wrap(function()
     while true do
         wait(150)
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-  if workspace:FindFirstChild("SeekMoving") or workspace.CurrentRooms:FindFirstChild("50") then
+  if workspace:FindFirstChild("SeekMovingNewClone") or workspace.CurrentRooms:FindFirstChild("50") then
           return
     end
 wait(0.5)
---loadstring(game:HttpGet("https://raw.githubusercontent.com/check78/Entities/main/overseer.txt"))()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/DripCapybara/Doors-Mode-Remakes/refs/heads/main/Overseer.lua"))()
 if seer == false then
 wait(3)
 seer = true
-local Achievements = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Custom%20Achievements/Source.lua"))()
-
--- Creates and displays your custom achievement
 Achievements({
     Title = "Staring Back.",
     Desc = "Encounter Overseer Eyes.",
     Reason = " ",
-    Image = GitPNG("https://github.com/check78/worldcuuuup/blob/main/OverseerBadge.png?raw=true","seerbadge"),
+    Image = GetGitImage("https://github.com/check78/worldcuuuup/blob/main/OverseerBadge.png?raw=true","seerbadge"),
 })
 end
     end
@@ -94,24 +82,19 @@ coroutine.wrap(function()
     while true do
         wait(150)
         game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-          if workspace:FindFirstChild("SeekMoving") or workspace.CurrentRooms:FindFirstChild("50") then
+          if workspace:FindFirstChild("SeekMovingNewClone") or workspace.CurrentRooms:FindFirstChild("50") then
           return
     end
         wait(0.3)
-        --loadstring(game:HttpGet("https://raw.githubusercontent.com/check78/Entities/main/Matcher.txt"))()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/DripCapybara/Doors-Mode-Remakes/refs/heads/main/Matcher.lua"))()
         if mat == false then
         wait(3)
         mat = true
-local Achievements = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Custom%20Achievements/Source.lua"))()
-
--- Creates and displays your custom achievement
---Achievements.Get({
 Achievements({
     Title = "No match for me!",
     Desc = "Encounter Matcher.",
     Reason = " ",
-    Image = GitPNG("https://github.com/check78/worldcuuuup/blob/main/MatchBadge.png?raw=true","matchbadge"),
+    Image = GetGitImage("https://github.com/check78/worldcuuuup/blob/main/MatchBadge.png?raw=true","matchbadge"),
 })
 end
     end
@@ -122,22 +105,18 @@ coroutine.wrap(function()
     while true do
         wait(750)
         game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-          if workspace:FindFirstChild("SeekMoving") or workspace.CurrentRooms:FindFirstChild("50") then
+          if workspace:FindFirstChild("SeekMovingNewClone") or workspace.CurrentRooms:FindFirstChild("50") then
           return
     end
-        --loadstring(game:HttpGet("https://raw.githubusercontent.com/check78/Entities/main/Claim%20v4.txt"))()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/DripCapybara/Doors-Mode-Remakes/refs/heads/main/Claim.lua"))()
 if clam == false then
 wait(3)
 clam = true
-local Achievements = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Custom%20Achievements/Source.lua"))()
-
--- Creates and displays your custom achievement
 Achievements({
     Title = "In Sight.",
     Desc = "Encounter Claim.",
     Reason = " ",
-    Image = GitPNG("https://github.com/check78/entity-images/blob/main/InSight.png?raw=true","Im_Not_Playing_These_Games"),
+    Image = GetGitImage("https://github.com/check78/entity-images/blob/main/InSight.png?raw=true","Im_Not_Playing_These_Games"),
 })
 end
     end
@@ -153,22 +132,16 @@ Phil.Anchored = true
 Phil.CanCollide = false
 Phil.Parent = workspace
 Phil.Transparency = 1
-
 local face = game:GetObjects("rbxassetid://10736929559")[1]
 face.Parent = Phil
-face.ImageLabel.Image = GitPNG("https://github.com/check78/entity-images/blob/main/Untitled241_20230322155244.png?raw=true","phil")
-
+face.ImageLabel.Image = GetGitImage("https://github.com/check78/entity-images/blob/main/Untitled241_20230322155244.png?raw=true","phil")
 local num=0
-
 if currentLoadedRoom:FindFirstChild("Nodes") then
    num = math.floor(#currentLoadedRoom.Nodes:GetChildren()/2)
 end
-
 Phil.CFrame=(
 	num==0 and currentLoadedRoom[currentLoadedRoom.Name] or currentLoadedRoom.Nodes[num]
 ).CFrame + Vector3.new(0, 5, 0)
-
- 
 wait(1)
 ModuleEvents = require(game:GetService("ReplicatedStorage").ClientModules.Module_Events)
 ModuleEvents.shatter(workspace.CurrentRooms[game:GetService("ReplicatedStorage").GameData.LatestRoom.Value])
@@ -239,19 +212,14 @@ end
         v.Color = Color3.new(0, 0, 0) -- sets the color
         end
     end
-    
-  
         if phil == false then
         wait(3)
         phil = true
-local Achievements = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Custom%20Achievements/Source.lua"))()
-
--- Creates and displays your custom achievement
 Achievements({
     Title = "I can't see anything!",
     Desc = "Encounter Phil.",
     Reason = " ",
-    Image = GitPNG("https://github.com/check78/worldcuuuup/blob/main/PhilStone.png?raw=true","philbadge"),
+    Image = GetGitImage("https://github.com/check78/worldcuuuup/blob/main/PhilStone.png?raw=true","philbadge"),
 })
 end
     end
@@ -262,22 +230,18 @@ coroutine.wrap(function()
     while true do
         wait(750)
         game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-          if workspace:FindFirstChild("SeekMoving") or workspace.CurrentRooms:FindFirstChild("50") then
+          if workspace:FindFirstChild("SeekMovingNewClone") or workspace.CurrentRooms:FindFirstChild("50") then
           return
     end
-       -- loadstring(game:HttpGet("https://raw.githubusercontent.com/check78/Entities/main/blunt.txt"))()
        loadstring(game:HttpGet("https://raw.githubusercontent.com/DripCapybara/Doors-Mode-Remakes/refs/heads/main/Blink.lua"))()
         if blink == false then
             wait(5)
             blink = true
-local Achievements = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Custom%20Achievements/Source.lua"))()
-
--- Creates and displays your custom achievement
 Achievements({
     Title = "Green Light, Red Light!",
     Desc = "Encounter Blink.",
     Reason = " ",
-    Image = GitPNG("https://github.com/check78/entity-images/blob/main/omg.png?raw=true","mmmtasty"),
+    Image = GetGitImage("https://github.com/check78/entity-images/blob/main/omg.png?raw=true","mmmtasty"),
 })
 end
     end
@@ -288,13 +252,12 @@ coroutine.wrap(function()
     while true do
         wait(450)
         game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-          if workspace:FindFirstChild("SeekMoving") or workspace.CurrentRooms:FindFirstChild("50") then
+          if workspace:FindFirstChild("SeekMovingNewClone") or workspace.CurrentRooms:FindFirstChild("50") then
           return
     end
-        
+       
 local ded = false
 local gone = false
-
 local sound = Instance.new("Sound",game.Lighting)
 sound.SoundId = "rbxassetid://166047422"
 sound.Volume = 5
@@ -312,12 +275,11 @@ if gone == false then
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/check78/Jumpscares/main/GreedJumpscare.txt"))()
 		    game:GetService("ReplicatedStorage").GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "Greed"
 		wait(1)
-	local Achievements = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Custom%20Achievements/Source.lua"))()
 Achievements({
  Title = "Too Greedy.",
  Desc = "Die to Greed",
  Reason = "",
- Image = GitPNG("https://github.com/check78/worldcuuuup/blob/main/GreedBadge1.png?raw=true","GreedyBadge")
+ Image = GetGitImage("https://github.com/check78/worldcuuuup/blob/main/GreedBadge1.png?raw=true","GreedyBadge")
 })
         end
 end
@@ -340,28 +302,22 @@ local tweenColor = game:GetService("TweenService"):Create(game.Lighting.MainColo
 end)()
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/check78/Entities/main/SilenceEndless.txt"))()
-
--- No Overseer in Lever Room
  workspace.CurrentRooms[game.ReplicatedStorage.GameData.LatestRoom.Value].Assets.ChildAdded:Connect(function(eye)
 	if eye.Name == "LeverForGate" then
 		wait(0.6)
         if workspace:FindFirstChild("Overseer") then
         workspace.Overseer:Destroy()
         end
-	else
-
 	end
 end)
 
 -- No Overseer in Seek Chase
 workspace.ChildAdded:Connect(function(seek)
-	if seek.Name == "SeekMoving" then
+	if seek.Name == "SeekMovingNewClone" then
 		wait(0.6)
 		if workspace:FindFirstChild("Overseer") then
         workspace.Overseer:Destroy()
         end
-	else
-
 	end
 end)
 
@@ -372,24 +328,11 @@ workspace.ChildAdded:Connect(function(seek)
         if workspace:FindFirstChild("Overseer") then
         workspace.Overseer:Destroy()
         end
-	else
-
 	end
 end)
 
-function ReplaceAudGit(GithubSnd,SoundName)
-local url=GithubSnd
-if not isfile(SoundName..".mp3") then 
-writefile(SoundName..".mp3", game:HttpGet(url)) 
-end
-local sound=Instance.new("Sound")
-sound.SoundId=(getcustomasset or getsynasset)(SoundName..".mp3")
-return sound
-end
-workspace.Ambience_Seek.SoundId = ReplaceAudGit("https://github.com/check78/worldcuuuup/blob/main/EndlessSeekChase.mp3?raw=true","EndlessSeekChase")
-workspace.Ambience_Seek.Volume = 5
-
-
+--workspace.Ambience_Seek.SoundId = GetGitSound("https://github.com/check78/worldcuuuup/blob/main/EndlessSeekChase.mp3?raw=true","EndlessSeekChase")
+--workspace.Ambience_Seek.Volume = 5
     local roast = Instance.new("Sound")
     roast.Parent = workspace
     roast.Name = "Omg"
