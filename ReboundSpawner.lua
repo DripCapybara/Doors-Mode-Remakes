@@ -1,14 +1,3 @@
--- Github Sounds
-function GetGitSound(GithubSnd,SoundName)
-	local url=GithubSnd
-	if not isfile(SoundName..".mp3") then
-		writefile(SoundName..".mp3", game:HttpGet(url))
-	end
-	local sound=Instance.new("Sound")
-	sound.SoundId=(getcustomasset or getsynasset)(SoundName..".mp3")
-	return sound
-end
-
 -- Services
 
 local Players = game:GetService("Players")
@@ -35,7 +24,7 @@ local SelfModules = {
     Functions = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Functions.lua"))(),
 }
 local ModuleScripts = {
-    ModuleEvents = require(ReSt.ClientModules.Module_Events),
+    ModuleEvents = require(ReSt.ModulesClient.Module_Events),
     MainGame = require(Plr.PlayerGui.MainUI.Initiator.Main_Game),
 }
 local EntityConnections = {}
@@ -313,7 +302,7 @@ local vroom = TweenService:Create(move, TweenInfo.new(1),{Volume = 0.5})
 
                 if entityTable.Config.CanKill and not Char:GetAttribute("IsDead") and not Char:GetAttribute("Invincible") and not Char:GetAttribute("Hiding") and (getPlayerRoot().Position - entityModel.PrimaryPart.Position).Magnitude <= entityTable.Config.KillRange then
                     task.spawn(function()
-if workspace:FindFirstChild("SeekMoving") or workspace.CurrentRooms:FindFirstChild("51") or workspace:FindFirstChild("Blink") then
+if workspace:FindFirstChild("SeekMovingNewClone") or workspace.CurrentRooms:FindFirstChild("50") or workspace:FindFirstChild("Blink") then
 									return
 end
                         Char:SetAttribute("IsDead", true)
